@@ -1,0 +1,119 @@
+@font-face {
+    font-family: 'Just Sans';
+    src: url('assets/fonts/JUST Sans Regular.woff2') format('woff2'),
+         url('assets/fonts/JUST Sans Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Just Sans';
+    src: url('assets/fonts/JUST Sans ExBold.woff2') format('woff2'),
+         url('assets/fonts/JUST Sans ExBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+
+/* Style Nav */
+
+.header-container {
+    max-width: 1280px;
+    height: 150px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px; /* Espacement global des côtés */
+}
+
+.site-header {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.site-logo img {
+    width: 112px;
+    height: 78px;
+    margin-top: 36px;
+    margin-bottom: 36px;
+}
+
+.main-navigation {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 60px; /* Espacement entre chaque élément du menu */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style pour les liens du menu principal */
+.nav-menu > li {
+    position: relative;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    font-family: 'Just Sans', sans-serif;
+    color: #333;
+    font-size: 18px; /* Ajuste la taille de police pour correspondre à la maquette */
+    line-height: 50px; /* Centrage vertical pour chaque lien */
+    padding: 0 5px; /* Espacement autour du texte pour ajuster le positionnement */
+    transition: color 0.3s;
+}
+
+.sub-menu{
+     
+    padding: 10px 30px 10px 0px !important;;
+    background-color: #ff000000 !important;;
+    box-shadow: none !important;;
+}
+
+.nav-menu li a:hover {
+    color: #C9171E;
+}
+
+/* Style spécifique pour le bouton "Contacter le cabinet" */
+#menu-item-24 {
+    background-color: #C9171E;
+    display: flex;
+    width: 241px;
+    height: 50px;
+    padding: 5px 16px;
+justify-content: center;
+align-items: center;
+}
+
+#menu-item-24 a {
+    color: #ffffff !important;
+    text-decoration: none;
+    font-size: 18px; /* Ajustement pour correspondre à la taille du texte de la maquette */
+}
+
+#menu-item-24:hover {
+    background-color: #a9131c;
+}
+
+/* Style pour les sous-menus */
+.nav-menu li ul {
+    display: none; /* Cache les sous-menus par défaut */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    padding: 10px 0;
+    list-style: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Affiche le sous-menu lors du survol de l'élément parent */
+.nav-menu li:hover > ul {
+    display: block;
+}
