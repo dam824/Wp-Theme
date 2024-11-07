@@ -4,6 +4,12 @@
         border: solid 1px rgb(191, 0, 255);
         padding: 70px 50px;
     }
+    .about-main-title h2 {
+        font-size: 40px;
+    }
+    .about-section-text {
+        padding: 0 30px;
+    }
 }
 
 /* Desktop - 992px et plus */
@@ -11,6 +17,17 @@
     .home-banner-content {
         border: solid 1px yellow;
         padding: 60px 40px;
+    }
+
+    .about-main-title h2 {
+        font-size: 35px;
+    }
+    .about-text p {
+        font-size: 18px;
+        line-height: 35px;
+    }
+    .about-btn button {
+        gap: 5px;
     }
 }
 
@@ -33,6 +50,20 @@
         border: solid 1px green;
         padding: 50px 30px;
     }
+
+    .about-main-title h2 {
+        font-size: 32px;
+    }
+    .about-text p {
+        font-size: 16px;
+        line-height: 30px;
+        padding: 0 15px;
+    }
+    .svg-circle {
+        width: 50px;
+        height: 50px;
+    }
+
 }
 
 /* Mobile large - 576px et plus */
@@ -41,6 +72,17 @@
         border: solid 1px blue;
         padding: 40px 20px;
     }
+
+    .about-text p {
+        font-size: 15px;
+        line-height: 28px;
+    }
+    .svg-circle {
+        width: 45px;
+        height: 45px;
+    }
+
+
 }
 
 /* Mobile - 375px et plus */
@@ -49,6 +91,20 @@
         border: solid 1px rgb(81, 223, 255);
         padding: 30px 15px;
     }
+    
+    .about-main-title h2 {
+        font-size: 24px;
+    }
+    .about-text p {
+        font-size: 14px;
+        line-height: 25px;
+        padding: 0 10px;
+    }
+    .svg-circle {
+        width: 40px;
+        height: 40px;
+    }
+
 }
 
 /* Mobile Navigation adjustments */
