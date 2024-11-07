@@ -18,7 +18,6 @@ function redcat_custom_logo_setup(){
 }
 
 //jQuery
-
 function redcat_enqueue_script(){
     //charger le jQuery fournis par WP
     wp_enqueue_script('jquery');
@@ -42,6 +41,12 @@ function redcat_enqueue_script(){
     wp_enqueue_style(
         'redcat-responsive-css',
         get_template_directory_uri() . '/assets/css/responsive.css'
+    );
+
+    //charger les fonts Adobe
+    wp_enqueue_style(
+        'redcat-typekit',
+        'https://use.typekit.net/mid3xpm.css'
     );
 }
 

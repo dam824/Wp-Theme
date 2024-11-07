@@ -1,16 +1,69 @@
-/* Afficher le bouton burger et masquer la nav sur mobile */
-@media (max-width: 1000px) {
-    .main-navigation {
-        display: none; /* Masquer le menu principal */
+/* Large Desktop - 1200px et plus */
+@media (max-width: 1200px) {
+    .home-banner-content {
+        border: solid 1px rgb(191, 0, 255);
+        padding: 70px 50px;
     }
-    .burger-menu {
-        display: flex; /* Afficher le bouton burger */
+}
+
+/* Desktop - 992px et plus */
+@media (max-width: 992px) {
+    .home-banner-content {
+        border: solid 1px yellow;
+        padding: 60px 40px;
     }
-    .mobile-menu-overlay.active {
-        display: flex; /* Afficher le menu mobile en overlay */
+}
+
+/* Tablette - 768px et plus */
+@media (max-width: 768px) {
+    .home-banner {
+        height: 60vh;  
+        align-items: center;  
     }
 
-    .mobile-nav-menu .sub-menu{
+    .home-banner h1 {
+        font-size: 40px; /* Ajuste la taille du h1 pour les petits écrans */
+    }
+
+    .home-banner p {
+        font-size: 18px; /* Ajuste la taille du paragraphe pour les petits écrans */
+    }
+
+    .home-banner-content {
+        border: solid 1px green;
+        padding: 50px 30px;
+    }
+}
+
+/* Mobile large - 576px et plus */
+@media (max-width: 576px) {
+    .home-banner-content {
+        border: solid 1px blue;
+        padding: 40px 20px;
+    }
+}
+
+/* Mobile - 375px et plus */
+@media (max-width: 375px) {
+    .home-banner-content {
+        border: solid 1px rgb(81, 223, 255);
+        padding: 30px 15px;
+    }
+}
+
+/* Mobile Navigation adjustments */
+@media (max-width: 1000px) {
+    .main-navigation {
+        display: none;  
+    }
+    .burger-menu {
+        display: flex;  
+    }
+    .mobile-menu-overlay.active {
+        display: flex;  
+    }
+
+    .mobile-nav-menu .sub-menu {
         padding: 0 !important;
         text-align: center;
         background-color: transparent;

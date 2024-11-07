@@ -1,3 +1,67 @@
+/******************************************************  
+********************* IMPORT FONTS  ************************
+******************************************************/
+@font-face {
+    font-family: 'Just Sans';
+    src: url('../fonts/JUST Sans Regular.woff2') format('woff2'),
+         url('../fonts/JUST Sans Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Just Sans';
+    src: url('.../fonts/JUST Sans ExBold.woff2') format('woff2'),
+         url('.../fonts/JUST Sans ExBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'TTHoves';
+    src: url('../fonts/TTHoves-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'TTHoves';
+    src: url('../fonts/TTHoves-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'TTHoves';
+    src: url('../fonts/TTHoves-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'TTHoves';
+    src: url('../fonts/TTHoves-DemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'TTHoves';
+    src: url('../fonts/TTHoves-MediumItalic.woff2') format('woff2');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face{
+    font-family: 'TTHoves';
+    src: url('../fonts/TTHoves-Thin.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+
 *,
 *::before,
 *::after {
@@ -5,27 +69,16 @@
 }
 
 
-@font-face {
-    font-family: 'Just Sans';
-    src: url('assets/fonts/JUST Sans Regular.woff2') format('woff2'),
-         url('assets/fonts/JUST Sans Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Just Sans';
-    src: url('assets/fonts/JUST Sans ExBold.woff2') format('woff2'),
-         url('assets/fonts/JUST Sans ExBold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-}
 
 body {
     margin: 0;
     padding: 0;
     width: 100%;
 }
+
+/******************************************************  
+*********************HEADER************************
+******************************************************/
 
 .site-header {
     width: 100%; /* Assure que le header prend toute la largeur de l'écran */
@@ -110,7 +163,7 @@ align-items: center;
     background-color: #a9131c;
 }
 
-/* Style pour les sous-menus */
+/********************* SOUS-MENU MOBILE ************************/
 .nav-menu li ul {
     display: none; /* Cache les sous-menus par défaut */
     position: absolute;
@@ -128,8 +181,10 @@ align-items: center;
     display: block;
 }
 
-/********************* MENU MOBILE ************************/
 
+/******************************************************  
+*********************MENU MOBILE  ************************
+******************************************************/
 /* Styles de base du bouton burger */
 .burger-menu {
     display: none;
@@ -169,8 +224,8 @@ align-items: center;
     left: 0;
     transform-origin: center;
 }
-
-/* Styles pour le menu mobile */
+/********************* Styles pour le menu mobile ************************/
+ 
 /* Transformation du bouton burger en croix */
 .burger-menu.active span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
@@ -231,7 +286,8 @@ align-items: center;
     gap: 5px; /
 }
 
-/* Styles pour le sous menu mobile */
+/********************* Styles pour le sous menu mobile************************/
+ 
 
 /* Cache le sous-menu par défaut */
 .mobile-nav-menu .sub-menu {
@@ -250,4 +306,153 @@ align-items: center;
 
 .mobile-nav-menu .menu-item-has-children > a.active::after {
     content: '▲'; /* Chevron up quand le sous-menu est ouvert */
+}
+
+/******************************************************  
+********************* HOMEPAGE ************************
+******************************************************/
+
+
+/*******************BANNER*********************/
+.home-banner{
+     
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    /* padding-left: 56px;
+    padding-bottom: 80px; */
+    box-sizing: border-box;
+
+}
+
+.home-banner-content{
+    border: solid 1px red;
+    padding: 80px 56px; /* Uniforme autour de la bannière */
+}
+
+.home-banner h1 {
+    font-family: "ivypresto-display", serif;
+    font-size: 70px;   
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 20px;
+}
+
+.home-banner p {
+    font-family: "TTHoves";
+    font-size: 30px;
+    font-weight: 300; /* Light */
+    line-height: 50px;
+}
+
+.home-banner p span {
+    font-family: "TTHoves";
+    font-size: 30px;
+    font-weight: 500; /* Medium */
+    font-style: italic;
+    line-height: 50px;
+}
+
+
+
+/*******************ABOUT SECTION*********************/
+.home-about{
+    border: solid 1px red;
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    padding-bottom: 123px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.about-main-title h2{
+    font-family: "ivypresto-display", serif;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 400;
+    
+}
+
+.about-main-title{
+    border: solid 1px green;
+}
+
+.about-section-text{
+     
+    border: solid 1px black;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    color: #4F4F4F;
+    
+}
+
+.about-text{
+    display: flex;
+    flex-direction: column;
+    gap:35px ;
+}
+
+.about-text p{
+    border: solid 1px blue;
+    font-family: "TTHoves";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;  
+    line-height: 40px;
+    width: 100%;
+    color: #333;  
+    margin: 0;  
+    padding: 0 20px;  
+}
+
+.about-btn{
+    width: 100%;
+}
+
+.about-btn button{
+   border: solid 1px rgb(8, 198, 208);
+   color: #C9171E;
+   background-color: transparent;
+   display: flex;
+    align-items: center;
+    gap: 1px;
+    font-family: "TTHoves";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.svg-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px; /* Diamètre du cercle */
+    height: 60px;
+    border: 1px solid #e8e8e8;
+    border-radius: 50%;
+    border-radius: 50%;
+}
+
+.svg-circle svg {
+    width: 25.456px;
+    height: 21.758px;
+    color: #C9171E;
+}
+
+
+/*******************ABOUT SECTION RED*********************/
+.home-about-red{
+    background-color:#C9171E ;
+    height: 552px;
+    padding-left: 50px;
+    padding-right: 50px;
+
 }
