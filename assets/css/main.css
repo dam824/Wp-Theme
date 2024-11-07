@@ -1,3 +1,10 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
 @font-face {
     font-family: 'Just Sans';
     src: url('assets/fonts/JUST Sans Regular.woff2') format('woff2'),
@@ -14,24 +21,27 @@
     font-style: normal;
 }
 
-
-
-/* Style Nav */
-
-.header-container {
-    max-width: 1280px;
-    height: 150px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 50px; /* Espacement global des côtés */
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
 
 .site-header {
+    width: 100%; /* Assure que le header prend toute la largeur de l'écran */
     border-bottom: 1px solid #e0e0e0;
+    padding: 0 50px;
 }
 
+/* L'intérieur du header, prend toute la largeur disponible dans .site-header */
+.header-container {
+    width: 100%; /* Assure que le contenu du header prend toute la largeur de .site-header */
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+ 
 .site-logo img {
     width: 112px;
     height: 78px;
@@ -116,4 +126,128 @@ align-items: center;
 /* Affiche le sous-menu lors du survol de l'élément parent */
 .nav-menu li:hover > ul {
     display: block;
+}
+
+/********************* MENU MOBILE ************************/
+
+/* Styles de base du bouton burger */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 1001;
+    position: relative;
+}
+
+.burger-menu span {
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    transition: all 0.3s;
+}
+
+/* Effet croix */
+.burger-menu.active span:nth-child(1) {
+    transform: rotate(45deg);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform-origin: center;
+}
+
+.burger-menu.active span:nth-child(2) {
+    opacity: 0; /* Cache la barre du milieu */
+}
+
+.burger-menu.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 90%;
+    left: 0;
+    transform-origin: center;
+}
+
+/* Styles pour le menu mobile */
+/* Transformation du bouton burger en croix */
+.burger-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Transition pour le burger */
+.burger-menu span {
+    transition: all 0.3s;
+}
+
+/* Animation de slide du menu mobile */
+.mobile-menu-overlay {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: -100%; /* Hors écran au départ */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: right 0.6s ease-in-out; /* Transition de slide */
+}
+
+.mobile-menu-overlay.active {
+    right: 0; /* Slide in */
+}
+
+.mobile-nav-menu {
+    list-style: none;
+    padding: 0;
+    font-family: 'Just Sans', sans-serif;
+     
+}
+
+.mobile-nav-menu li {
+    margin: 15px 0;
+    position: relative;
+}
+
+.mobile-nav-menu li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #333;
+    display: flex;
+    justify-content: center;  
+    align-items: center;  
+    gap: 5px; /
+}
+
+/* Styles pour le sous menu mobile */
+
+/* Cache le sous-menu par défaut */
+.mobile-nav-menu .sub-menu {
+    display: none;
+    list-style: none;
+  }
+  
+/* Chevron pour le lien parent avec sous-menu */
+.mobile-nav-menu .menu-item-has-children > a::after {
+    content: '▼'; /* Chevron down par défaut */
+    font-size: 14px;
+    color: #333;
+     
+    transition: transform 0.3s;
+}
+
+.mobile-nav-menu .menu-item-has-children > a.active::after {
+    content: '▲'; /* Chevron up quand le sous-menu est ouvert */
 }

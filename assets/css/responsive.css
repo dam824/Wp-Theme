@@ -1,0 +1,19 @@
+/* Afficher le bouton burger et masquer la nav sur mobile */
+@media (max-width: 1000px) {
+    .main-navigation {
+        display: none; /* Masquer le menu principal */
+    }
+    .burger-menu {
+        display: flex; /* Afficher le bouton burger */
+    }
+    .mobile-menu-overlay.active {
+        display: flex; /* Afficher le menu mobile en overlay */
+    }
+
+    .mobile-nav-menu .sub-menu{
+        padding: 0 !important;
+        text-align: center;
+        background-color: transparent;
+        box-shadow: none;
+    }
+}

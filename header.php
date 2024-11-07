@@ -21,13 +21,31 @@
                <?php endif; ?>
                 
             </div>
-            <!-- Menu de navigation -->
+             <!-- Menu de navigation pour desktop -->
             <nav class="main-navigation">
                 <?php
                 wp_nav_menu(array(
                     'theme_location' => 'primary', //emplacement de menu
                     'menu_class' => 'nav-menu', //class css pour le menu
                     'container' => 'false' // pas de container supp
+                ));
+                ?>
+            </nav>
+             <!-- Bouton burger pour mobile -->
+             <div class="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+         <!-- Menu mobile -->
+         <div class="mobile-menu-overlay">
+            <nav class="mobile-navigation">
+                <?php
+                wp_nav_menu(array(
+                    'theme_location' => 'primary', // Emplacement de menu
+                    'menu_class' => 'mobile-nav-menu', // Classe CSS pour le menu mobile
+                    'container' => false // Pas de conteneur supplémentaire
                 ));
                 ?>
             </nav>
