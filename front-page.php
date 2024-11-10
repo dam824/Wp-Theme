@@ -39,39 +39,7 @@
             <span class="about-red-title-italic">nos domaines d'intervention en droit social</span>
         </h2>
     </div>
-    <div class="about-red-caroussel">
-        <!-- Points de pagination -->
-        <div class="carousel-indicators">
-            <span class="indicator active"></span>
-            <span class="indicator"></span>
-            <span class="indicator"></span>
-        </div>
-
-        <div class="caroussel-slide-1">
-            <h3>Conseil</h3>
-            <div class="about-red-text">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing<br> elit. Dorean amelai consecteur.</p>
-            </div>
-        </div>
-        <div class="caroussel-slide-2">
-            <h3>Contentieux</h3>
-            <div class="about-red-text">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing<br> elit. Dorean amelai consecteur.</p>
-            </div>
-        </div>
-        <div class="caroussel-slide-3">
-            <h3>Formation</h3>
-            <div class="about-red-text">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing<br> elit. Dorean amelai consecteur.</p>
-            </div>
-        </div>
-
-        <!-- Flèches de navigation -->
-        <div class="carousel-navigation">
-            <span class="prev">&lt;</span>
-            <span class="next">&gt;</span>
-        </div>
-    </div>
+   <?php get_template_part('/template-parts/sections/home-carousel') ;?>
 
 </section>
 <!-- sections chiffres  -->

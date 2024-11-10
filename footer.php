@@ -32,3 +32,6 @@
         <span>Mentions légales | Politique de confidentialité</span>
     </div>
 </footer>
+<?php wp_footer(); ?>
+</body>
+</html>

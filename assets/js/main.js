@@ -1,5 +1,5 @@
 jQuery(document).ready(function ($) {
-  console.log("jquery ready");
+  console.log('jquery ready')
   // Lorsque l'on clique sur le burger menu, on toggle l'affichage du menu mobile
   $(".burger-menu").click(function () {
     $(".mobile-menu-overlay").toggleClass("active");
@@ -22,8 +22,39 @@ jQuery(document).ready(function ($) {
     $(this).parent().find('.sub-menu').stop(true, true).slideToggle(300); // Affiche ou masque le sous-menu
   });
 
+   //test caorousel 
    
-   
+   let currentSlide = 0;
   
+
+   function showSlide(slideIndex) {
+       // Changer l'indicateur actif
+       $('.indicator').removeClass('active');
+       $('.indicator[data-slide="' + slideIndex + '"]').addClass('active');
+
+       // Changer le titre actif
+       $('.carousel-slides-title h3').removeClass('active');
+       $('.carousel-slides-title h3').eq(slideIndex).addClass('active');
+
+       // Afficher le contenu correspondant
+       $('.about-red-text').removeClass('active');
+       $('.about-red-text[data-slide="' + slideIndex + '"]').addClass('active');
+   }
+
+   // Gestion des clics sur les indicateurs
+   $('.indicator').click(function() {
+       let slideIndex = $(this).data('slide');
+       currentSlide = slideIndex;
+       showSlide(currentSlide);
+   });
+
+   // Navigation automatique (facultatif)
+   setInterval(function() {
+       currentSlide = (currentSlide + 1) % 3; // Passe au slide suivant
+       showSlide(currentSlide);
+   }, 5000); // 5 secondes entre chaque slide
+  
+ 
+   
 
 });
