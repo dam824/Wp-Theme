@@ -859,8 +859,8 @@ align-items: center;
     gap: 20px;
 }
 .actu-container{
-   border: 1px solid red;
-   height: 300px;
+   border-top: 1px solid red;
+   height: 200px;
    width: 500px; 
    padding-top: 15px ;
    display: flex;
@@ -876,4 +876,142 @@ align-items: center;
 .actualite-boutton{
     display: flex;
     justify-content: center;
+}
+
+
+
+/************** Structure principale du footer ****************/
+.footer {
+    background-color: #1E1E1E; /* Couleur de fond */
+    padding: 40px 50px;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+/* Conteneur principal pour organiser les colonnes */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+/* Section de gauche */
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer-left h3 {
+    font-family: "ivypresto-display";
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0;
+}
+
+.footer-left p {
+    font-family: "ivypresto-display";
+    font-size: 45px;
+    font-style: italic;
+    font-weight: 400;
+    margin: 0;
+}
+
+/* Bouton de contact */
+.contact-button {
+    background-color: #C9171E; /* Couleur rouge du bouton */
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    width: 241px;
+    height: 50px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-family: "TTHoves";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+/* Section de droite avec deux colonnes */
+.footer-right {
+    display: flex;
+    gap: 50px;
+}
+
+.footer-links h4, .footer-addresses h4{
+    font-family: "TTHoves";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    margin: 0;
+   
+}
+
+.footer-links,
+.footer-addresses {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+
+.footer-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-menu ul, .footer-addresses ul{
+    padding: 0;
+}
+
+.footer-menu li {
+    list-style: none;
+}
+
+.footer-menu a {
+    color: #ffffff;  
+    font-family: "TTHoves";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: none;  
+}
+
+/* Section des bureaux */
+.footer-addresses ul li {
+    list-style: none;
+    font-family: "TTHoves";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-addresses li {
+    font-size: 14px;
+    color: #ffffff;
+}
+
+/* Ligne de séparation dans le bas du footer */
+.footer-bottom span{
+    font-family: "TTHoves";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.footer-bottom {
+    border-top: 1px solid #444444;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    font-size: 12px;
+    margin-top: 30px;
 }

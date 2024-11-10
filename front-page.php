@@ -161,30 +161,5 @@
 </section>
 <div class="section-separator"></div>
 <!-- sections klp actus  -->
-<section class="home-section-actualites">
-    <div class="actualites-titre">
-        <h2>Les dernières actualités du <span>cabinet KLP Partners</span></h2>
-    </div>
-    <div class="actualites-content">
-        <!-- boucle actus  -->
-        <div class="actu-container">
-            <h4>Conseil</h4>
-            <p>Text...</p>
-            <p>date</p>
-        </div>
-        <div class="actu-container">
-            <h4>Conseil</h4>
-            <p>Text...</p>
-            <p>date</p>
-        </div>
-        <div class="actu-container">
-            <h4>Conseil</h4>
-            <p>Text...</p>
-            <p>date</p>
-        </div>
-    </div>
-    <div class="actualite-boutton">
-        <button>TOUTE NOS ACTUALITES</button>
-    </div>
-</section>
+<?php get_template_part('template-parts/sections/actualites'); ?>
 <?php get_footer() ?>
