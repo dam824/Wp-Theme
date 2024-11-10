@@ -34,47 +34,157 @@
 </section>
 <!-- sections red -->
 <section class="home-about-red">
+    <div class="about-red-title">
+        <h2>L'excellence juridique à votre service :<br>
+            <span class="about-red-title-italic">nos domaines d'intervention en droit social</span>
+        </h2>
+    </div>
+    <div class="about-red-caroussel">
+        <!-- Points de pagination -->
+        <div class="carousel-indicators">
+            <span class="indicator active"></span>
+            <span class="indicator"></span>
+            <span class="indicator"></span>
+        </div>
+
+        <div class="caroussel-slide-1">
+            <h3>Conseil</h3>
+            <div class="about-red-text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing<br> elit. Dorean amelai consecteur.</p>
+            </div>
+        </div>
+        <div class="caroussel-slide-2">
+            <h3>Contentieux</h3>
+            <div class="about-red-text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing<br> elit. Dorean amelai consecteur.</p>
+            </div>
+        </div>
+        <div class="caroussel-slide-3">
+            <h3>Formation</h3>
+            <div class="about-red-text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing<br> elit. Dorean amelai consecteur.</p>
+            </div>
+        </div>
+
+        <!-- Flèches de navigation -->
+        <div class="carousel-navigation">
+            <span class="prev">&lt;</span>
+            <span class="next">&gt;</span>
+        </div>
+    </div>
 
 </section>
-<!-- sections red -->
+<!-- sections chiffres  -->
 <section class="home-about-confiance">
     <div class="confiance-title">
-        <h3>Pourquoi faire confiance à notre cabinet ? </h3>
+        <h3>Pourquoi faire <span>confiance</span> à notre cabinet ? </h3>
     </div>
     <div class="confiance-number">
         <div class="number-left">
-            <div class="number-left-main">+20</div>
-            <div class="number-left-content">années <br> d'expérience </div>
+            <p class="number-left-main">+20</p>
+            <p class="number-left-content">années <br> d'expérience</p>
         </div>
         <div class="number-right">
-            <div class="number-right-main">+2000</div>
-            <div class="number-right-content">affaire résolues</div>
+            <p class="number-right-main">+2000</p>
+            <p class="number-right-content">affaire résolues</p>
         </div>
     </div>
 </section>
 <!-- sections klp accompagne  -->
 <section class="home-about-accompagnement">
     <div class="accompagnement-title">
-        <h1>KLP Partners vous accompagne<br>
-            partout en France</h1>
+        <h2>KLP Partners vous accompagne<br>
+            <span>partout en France<span>
+        </h2>
     </div>
     <div class="accompagnement-content">
-        <div class="accompagnement-content-img"></div>
+        <div class="accompagnement-content-img">
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/accompagnement-photo.png" alt="image tour effeil">
+        </div>
         <div class="accompagnement-content-list">
             <ul>
-                <li>Paris</li>
-                <li>Versailles</li>
-                <li>Marseille</li>
+                <li>
+                    <span>Paris</span>
+                    <a href="/cabinet-paris" class="location-link">
+
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Arrow_Forward.svg">
+                        Notre cabinet à Paris
+
+                    </a>
+                </li>
+                <li>
+                    <span>Versailles</span>
+                    <a href="/cabinet-versailles" class="location-link">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Arrow_Forward.svg">
+                        Notre cabinet à Versailles
+
+                    </a>
+                </li>
+                <li>
+                    <span>Marseille</span>
+                    <a href="/cabinet-marseille" class="location-link">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Arrow_Forward.svg">
+                        Notre cabinet à Marseille
+
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
 </section>
 <!-- sections klp accompagne  -->
 <section class="home-notre-equipe">
-    <!-- cards avocats  -->
+    <div class="notre-equipe-title">
+        <h3>Une équipe d’avocats<br>
+            spécialisée en <span>droit social</span> </h3>
+    </div>
+    <div class="notre-equipe-card">
+        <div class="card card-1" style="background-image: url('<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/avocat-1.jpg');">
+            <div class="card-overlay">
+                <h4>CARINE KALFON</h4>
+                <p>Associée fondatrice</p>
+            </div>
+            <div class="arrow-icon">
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/arrow-white.svg" alt="Arrow Icon">
+            </div>
+        </div>
+        <div class="card card-2" style="background-image: url('<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/avocat-2.jpg');">
+            <div class="card-overlay">
+                <h4>DELPHINE PICQUE</h4>
+                <p>Associée fondatrice</p>
+            </div>
+            <div class="arrow-icon">
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/arrow-white.svg" alt="Arrow Icon">
+            </div>
+        </div>
+    </div>
 </section>
+<div class="section-separator"></div>
 <!-- sections klp actus  -->
 <section class="home-section-actualites">
-    <!-- actualites -->
+    <div class="actualites-titre">
+        <h2>Les dernières actualités du <span>cabinet KLP Partners</span></h2>
+    </div>
+    <div class="actualites-content">
+        <!-- boucle actus  -->
+        <div class="actu-container">
+            <h4>Conseil</h4>
+            <p>Text...</p>
+            <p>date</p>
+        </div>
+        <div class="actu-container">
+            <h4>Conseil</h4>
+            <p>Text...</p>
+            <p>date</p>
+        </div>
+        <div class="actu-container">
+            <h4>Conseil</h4>
+            <p>Text...</p>
+            <p>date</p>
+        </div>
+    </div>
+    <div class="actualite-boutton">
+        <button>TOUTE NOS ACTUALITES</button>
+    </div>
 </section>
 <?php get_footer() ?>

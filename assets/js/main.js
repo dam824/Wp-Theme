@@ -22,4 +22,8 @@ jQuery(document).ready(function ($) {
     $(this).parent().find('.sub-menu').stop(true, true).slideToggle(300); // Affiche ou masque le sous-menu
   });
 
+   
+   
+  
+
 });
