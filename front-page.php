@@ -39,7 +39,7 @@
             <span class="about-red-title-italic">nos domaines d'intervention en droit social</span>
         </h2>
     </div>
-   <?php get_template_part('/template-parts/sections/home-carousel') ;?>
+    <?php get_template_part('/template-parts/sections/home-carousel'); ?>
 
 </section>
 <!-- sections chiffres  -->
@@ -74,24 +74,27 @@
                 <li>
                     <span>Paris</span>
                     <a href="/cabinet-paris" class="location-link">
-
-                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Arrow_Forward.svg">
+                        <div class="location-icon">
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Arrow_Forward.svg" alt="Arrow Icon">
+                        </div>
                         Notre cabinet à Paris
-
                     </a>
                 </li>
                 <li>
                     <span>Versailles</span>
                     <a href="/cabinet-versailles" class="location-link">
-                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Arrow_Forward.svg">
+                        <div class="location-icon">
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Arrow_Forward.svg">
+                        </div>
                         Notre cabinet à Versailles
-
                     </a>
                 </li>
                 <li>
                     <span>Marseille</span>
                     <a href="/cabinet-marseille" class="location-link">
-                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Arrow_Forward.svg">
+                        <div class="location-icon">
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Arrow_Forward.svg">
+                        </div>
                         Notre cabinet à Marseille
 
                     </a>
