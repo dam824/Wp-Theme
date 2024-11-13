@@ -29,6 +29,18 @@
     .about-btn button {
         gap: 5px;
     }
+
+    .accompagnement-content{
+        display: flex;
+        gap: 50px;
+    }
+
+    .actualites-content{
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        align-items: center;
+    }
 }
 
 /* Tablette - 768px et plus */

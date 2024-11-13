@@ -360,7 +360,7 @@ align-items: center;
 
 /*******************ABOUT SECTION*********************/
 .home-about{
-    border: solid 1px red;
+    
     display: flex;
     flex-direction: column;
     padding-top: 100px;
@@ -377,12 +377,10 @@ align-items: center;
     
 }
 
-.about-main-title{
-    border: solid 1px green;
-}
+ 
 .about-section-text{
      
-    border: solid 1px black;
+    
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -398,7 +396,7 @@ align-items: center;
 }
 
 .about-text p{
-    border: solid 1px blue;
+     
     font-family: "TTHoves";
     font-size: 20px;
     font-style: normal;
@@ -415,7 +413,7 @@ align-items: center;
 }
 
 .about-btn button{
-   border: solid 1px rgb(8, 198, 208);
+   
    color: #C9171E;
    background-color: transparent;
    display: flex;
@@ -427,6 +425,7 @@ align-items: center;
     line-height: 1.5;
     letter-spacing: 1px;
     cursor: pointer;
+    border: none;
 }
 
 .svg-circle {
@@ -459,9 +458,7 @@ align-items: center;
 
 }
 
-.about-red-title{
-    border: solid 2px white;
-}
+ 
 
 .about-red-title h2{
     font-family: "ivypresto-display";
