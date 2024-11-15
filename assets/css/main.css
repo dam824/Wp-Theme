@@ -515,98 +515,91 @@ align-items: center;
 
 .about-red-caroussel {
     position: relative;
-    background-color: black; /* Rouge conservé */
+    background-color: black;
     padding: 50px;
     overflow: hidden;
-}
-
-.carousel-indicators {
+  }
+  
+  .carousel-indicators {
     display: flex;
     gap: 8px;
     position: absolute;
     top: 10px;
     left: 10px;
-}
-
-.indicator {
+  }
+  
+  .indicator {
     width: 10px;
     height: 10px;
-    background-color: rgba(201, 23, 30, 0.30);
+    background-color: rgba(201, 23, 30, 0.3);
     border-radius: 50%;
     cursor: pointer;
     transition: background-color 0.3s;
-}
-
-.indicator.active {
-    background-color: #C9171E;
-}
-
-.carousel-slides-title {
-    position: relative;
+  }
+  
+  .indicator.active {
+    background-color: #c9171e;
+  }
+  
+  .carousel-slides-title {
     display: flex;
-    width: 100%;
-    height: 100px;
     overflow: hidden;
-}
-
-.caroussel-slide {
-    position: absolute;
+    align-items: center;
+    height: 100px;
+     
     width: 100%;
-    top: -90px;
-    left: 0;
+  }
+  
+  .caroussel-slide {
+    min-width: 33.33%;
     text-align: center;
-    opacity: 0;
-    transform: translateX(100%);
-    transition: transform 0.5s ease, opacity 0.5s ease;
-}
-
-/* Style pour les titres dans chaque slide */
-.carousel-slides-title h3 {
-    font-family: "ivypresto-display";
-    font-size: 70px;
-    font-weight: 400;
-    color: #ada4a4ab; /* Couleur grisée pour les titres à droite */
-    transition: color 0.3s;
-}
-
-.carousel-slides-title .caroussel-slide.active h3 {
-    color: #C9171E;
+    transition: transform 0.5s ease, color 0.5s ease;
+    color: rgba(255, 255, 255, 0.5); /* Couleur gris clair par défaut */
+    
+  }
+  
+  .caroussel-slide.active {
     opacity: 1;
-    transform: translateX(0); /* Position active au centre */
-}
-
-.carousel-slides-title .caroussel-slide.hide-left {
-    display: none; /* Cacher les titres à gauche */
-}
-
-.caroussel-slide.active h3 {
-    font-family: "ivypresto-display";
-    font-size: 70px;
+    transform: translateX(0);
+  }
+  
+  .caroussel-slide.hide-left {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  
+  .carousel-slides-title h3 {
+    font-family: "ivypresto-display", serif;
+    font-size: 40px;
     font-weight: 400;
-    color: #ffffffab;
+    color: #ada4a4ab;
     transition: color 0.3s;
     text-align: left;
-}
-
-.caroussel-slide-content {
+  }
+  
+  .carousel-slides-title .caroussel-slide.active h3 {
+    color: #c9171e;
+  }
+  
+  .caroussel-slide-content {
     color: white;
     position: relative;
-}
-
-/* Styles pour le texte de chaque slide */
-.about-red-text {
-    display: none;
-    font-family: "TTHoves";
-    font-size: 20px;
+    margin-top: 20px;
+  }
+  
+  .about-red-text {
     opacity: 0;
     transition: opacity 0.5s ease;
-}
-
-.about-red-text.active {
-    display: block;
+  }
+  
+  .about-red-text.active {
     opacity: 1;
-}
-
+  }
+  
+  .carousel-slides-title .caroussel-slide.inactive h3 {
+    color:  rgba(201, 23, 30, 0.3);; 
+  }
+  
 
 
 

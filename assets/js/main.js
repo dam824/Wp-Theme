@@ -91,47 +91,60 @@ $(document).ready(function () {
 
   
   
-  //test caorousel
+  //ici caorousel
+  // Carrousel
   let currentSlide = 0;
+  const indicators = $(".indicator");
+  const slides = $(".caroussel-slide");
+  const texts = $(".about-red-text");
 
   function showSlide(slideIndex) {
-    // Changer l'indicateur actif
-    $(".indicator").removeClass("active");
-    $('.indicator[data-slide="' + slideIndex + '"]').addClass("active");
+    // Met à jour les indicateurs
+    indicators.removeClass("active");
+    $(indicators[slideIndex]).addClass("active");
 
-    // Mettre à jour les slides
-    $(".caroussel-slide").each(function (index) {
-      $(this).removeClass("active hide-left").css({
-        opacity: "0",
-        transform: "translateX(100%)",
-      });
-      if (index < slideIndex) {
-        $(this).addClass("hide-left"); // Cacher les titres à gauche
-      } else if (index === slideIndex) {
-        $(this).addClass("active").css({
-          opacity: "1",
-          transform: "translateX(0)",
-        });
+    // Applique la transformation pour le défilement horizontal
+    slides.each(function (index) {
+      $(this).removeClass("active inactive");
+
+      // Gère la position des titres avec translateX
+      $(this).css("transform", `translateX(-${slideIndex * 100}%)`);
+
+      // Met à jour la couleur des titres
+      if (index === slideIndex) {
+        $(this).addClass("active");
+      } else {
+        $(this).addClass("inactive");
       }
     });
 
-    // Mettre à jour le texte correspondant
-    $(".about-red-text").removeClass("active").css("opacity", "0");
-    $('.about-red-text[data-slide="' + slideIndex + '"]')
-      .addClass("active")
-      .css("opacity", "1");
+    // Met à jour le texte correspondant
+    texts.removeClass("active");
+    $(texts[slideIndex]).addClass("active");
   }
 
   // Gestion des clics sur les indicateurs
-  $(".indicator").click(function () {
-    let slideIndex = $(this).data("slide");
-    currentSlide = slideIndex;
-    showSlide(currentSlide);
+  indicators.each(function (index) {
+    $(this).on("click", function () {
+      currentSlide = index;
+      showSlide(currentSlide);
+    });
   });
 
   // Navigation automatique
   setInterval(function () {
-    currentSlide = (currentSlide + 1) % 3; // Passe au slide suivant
+    currentSlide = (currentSlide + 1) % slides.length;
     showSlide(currentSlide);
-  }, 50000000); // 5 secondes entre chaque slide
+  }, 5000); // Délai de 5 secondes entre chaque slide
+
+  // Ajout pour l'initialisation des mots de texte animés
+  $(".animated-text").each(function () {
+    if (isInViewport(this) && !$(this).hasClass("animated")) {
+      $(this).addClass("animated");
+      animateTextReveal(this);
+    }
+  });
+  
+
+
 });
