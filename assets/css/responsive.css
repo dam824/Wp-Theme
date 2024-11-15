@@ -1,7 +1,7 @@
 /* Large Desktop - 1200px et plus */
 @media (max-width: 1200px) {
     .home-banner-content {
-        border: solid 1px rgb(191, 0, 255);
+         
         padding: 70px 50px;
     }
     .about-main-title h2 {
@@ -15,7 +15,6 @@
 /* Desktop - 992px et plus */
 @media (max-width: 992px) {
     .home-banner-content {
-        border: solid 1px yellow;
         padding: 60px 40px;
     }
 
@@ -59,7 +58,7 @@
     }
 
     .home-banner-content {
-        border: solid 1px green;
+         
         padding: 50px 30px;
     }
 
@@ -92,7 +91,7 @@
 /* Mobile large - 576px et plus */
 @media (max-width: 576px) {
     .home-banner-content {
-        border: solid 1px blue;
+         
         padding: 40px 20px;
     }
 
@@ -111,7 +110,7 @@
 /* Mobile - 375px et plus */
 @media (max-width: 375px) {
     .home-banner-content {
-        border: solid 1px rgb(81, 223, 255);
+        
         padding: 30px 15px;
     }
     

@@ -329,7 +329,7 @@ align-items: center;
 }
 
 .home-banner-content{
-    border: solid 1px red;
+     
     padding: 80px 56px; /* Uniforme autour de la bannière */
 }
 
@@ -344,17 +344,32 @@ align-items: center;
 .home-banner p {
     font-family: "TTHoves";
     font-size: 30px;
-    font-weight: 300; /* Light */
+    font-weight: 300;  
     line-height: 50px;
 }
 
 .home-banner p span {
     font-family: "TTHoves";
     font-size: 30px;
-    font-weight: 500; /* Medium */
+    font-weight: 500;  
     font-style: italic;
     line-height: 50px;
 }
+
+/****effet texte ****/
+
+.animated-text span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(-20px); /* Départ en haut */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animated-text span.show {
+    opacity: 1;
+    transform: translateY(0); /* Arrivée à la position normale */
+}
+
 
 
 
@@ -448,7 +463,7 @@ align-items: center;
 
 /*******************ABOUT SECTION RED*********************/
 .home-about-red{
-    background-color:#C9171E ;
+    background-color:black;
     display: flex;
     flex-direction: column;
     gap: 28px;
@@ -480,26 +495,11 @@ align-items: center;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*******************CAROUSEL*********************/
 
 .about-red-caroussel {
     position: relative;
-    background-color: #c9171e; /* Rouge conservé */
+    background-color: black; /* Rouge conservé */
     padding: 50px;
     overflow: hidden;
 }
@@ -515,14 +515,14 @@ align-items: center;
 .indicator {
     width: 10px;
     height: 10px;
-    background-color: #555;
+    background-color: rgba(201, 23, 30, 0.30);
     border-radius: 50%;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 .indicator.active {
-    background-color: #ffffff;
+    background-color: #C9171E;
 }
 
 .carousel-slides-title {
@@ -554,7 +554,7 @@ align-items: center;
 }
 
 .carousel-slides-title .caroussel-slide.active h3 {
-    color: white;
+    color: #C9171E;
     opacity: 1;
     transform: translateX(0); /* Position active au centre */
 }
