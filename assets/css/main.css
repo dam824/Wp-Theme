@@ -433,7 +433,7 @@ align-items: center;
    background-color: transparent;
    display: flex;
     align-items: center;
-    gap: 1px;
+    gap: 20px;
     font-family: "TTHoves";
     font-size: 20px;
     font-weight: 400;
@@ -447,19 +447,35 @@ align-items: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 60px; /* Diamètre du cercle */
-    height: 60px;
+    width: 80px;  
+    height: 80px;
     border: 1px solid #e8e8e8;
     border-radius: 50%;
-    border-radius: 50%;
+    transition: transform 0.3s ease;
+    transform-origin: center;
+    position: relative;
+    
 }
+
+.svg-circle:hover{
+    transform: scale(1.1);
+    
+ }
 
 .svg-circle svg {
     width: 25.456px;
     height: 21.758px;
     color: #C9171E;
+    position: relative;
+    transition: transform 0.3s ease;
+   
 }
 
+.svg-circle:hover svg {
+    transform: translate(3px, -3px);
+    transition: transform 0.3s ease;
+}
+ 
 
 /*******************ABOUT SECTION RED*********************/
 .home-about-red{
