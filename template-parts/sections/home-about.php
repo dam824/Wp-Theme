@@ -1,6 +1,6 @@
 <section class="home-about">
     <div class="about-main-title">
-        <h2>
+        <h2 class="animated-text">
             Un cabinet entièrement dédié au droit du travail qui<br> s’engage à créer des solutions sur-mesure pour répondre<br> aux besoins spécifiques de chacun de ses clients
         </h2>
     </div>

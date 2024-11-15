@@ -21,66 +21,76 @@ jQuery(document).ready(function ($) {
     $(this).parent().find(".sub-menu").stop(true, true).slideToggle(300); // Affiche ou masque le sous-menu
   });
 
-  //text reveal
-  // Fonction pour entourer chaque mot d'un <span>
-  function wrapWordsInSpans(selector) {
-    $(selector).each(function () {
-      let words = $(this).text().split(" ");
-      $(this).html(words.map((word) => `<span>${word}</span>`).join(" "));
-      console.log(words);
+  // TEXT REVEAL EFFECT
+
+// Fonction pour entourer chaque mot d'un <span>, même si certains mots sont déjà entourés
+function wrapWordsInSpans(selector) {
+  $(selector).each(function () {
+    let html = $(this).html().trim();
+    let words = html.split(/(<[^>]+>| )/g); // Garde les balises et les espaces
+    let wrappedWords = words.map((word) => {
+      if (word.startsWith("<") && word.endsWith(">")) {
+        // Conserve les balises HTML telles quelles
+        return word;
+      } else if (word.trim() === "") {
+        // Conserve les espaces
+        return word;
+      } else {
+        // Enveloppe chaque mot dans un span
+        return `<span>${word}</span>`;
+      }
     });
-  }
+    $(this).html(wrappedWords.join(""));
+  });
+}
 
-  // Fonction pour entourer chaque mot d'un <span>, même si certains mots sont déjà entourés
-  function wrapWordsInSpans(selector) {
-    $(selector).each(function () {
-      let html = $(this).html().trim();
-      let words = html.split(/(<[^>]+>| )/g); // Garde les balises et les espaces
-      let wrappedWords = words.map((word) => {
-        if (word.startsWith("<") && word.endsWith(">")) {
-          // Conserve les balises HTML telles quelles
-          return word;
-        } else if (word.trim() === "") {
-          // Conserve les espaces
-          return word;
-        } else {
-          // Enveloppe chaque mot dans un span
-          return `<span>${word}</span>`;
-        }
-      });
-      $(this).html(wrappedWords.join(""));
-    });
-  }
+// Fonction pour vérifier si un élément est dans le viewport
+function isInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
 
-  // Fonction pour animer les mots dans les <span> de manière synchrone
-  function animateTextReveal() {
-    let h1Spans = $(".home-banner-content h1.animated-text span");
-    let pSpans = $(".home-banner-content p.animated-text span");
-    let totalSpans = Math.max(h1Spans.length, pSpans.length); // Prend le plus grand nombre de spans pour synchroniser
-
-    for (let i = 0; i < totalSpans; i++) {
-      $(h1Spans[i])
-        .delay(i * 40)
+// Fonction pour animer les mots dans les <span> de manière synchrone
+function animateTextReveal(selector) {
+  $(selector).each(function () {
+    let spans = $(this).find("span");
+    spans.each(function (index) {
+      $(this)
+        .delay(index * 40)
         .queue(function (next) {
           $(this).addClass("show");
           next();
         });
-      $(pSpans[i])
-        .delay(i * 40)
-        .queue(function (next) {
-          $(this).addClass("show");
-          next();
-        });
+    });
+  });
+}
+
+// Initialisation : entoure chaque mot d'un <span>
+wrapWordsInSpans(".animated-text");
+
+// Fonction pour gérer l'animation au défilement
+function handleScrollAnimation() {
+  $(".animated-text").each(function () {
+    if (isInViewport(this) && !$(this).hasClass("animated")) {
+      $(this).addClass("animated"); // Évite de relancer l'animation plusieurs fois
+      animateTextReveal(this); // Lance l'animation pour les éléments visibles
     }
-  }
+  });
+}
 
-  wrapWordsInSpans(".home-banner-content .animated-text");
-  animateTextReveal();
+// Lancer l'animation au chargement pour les éléments visibles
+$(document).ready(function () {
+  handleScrollAnimation(); // Lancer l'animation au chargement pour les éléments dans le viewport
+  $(window).on("scroll", handleScrollAnimation); // Animation au scroll
+});
 
-  // Lancer les animations
-  wrapWordsInSpans(".home-banner-content .animated-text");
-  animateTextReveal();
-
+  
+  
   //test caorousel
   let currentSlide = 0;
 
