@@ -1,6 +1,6 @@
 <section class="home-about-confiance">
     <div class="confiance-title">
-        <h3>Pourquoi faire <span>confiance</span> à notre cabinet ? </h3>
+        <h3 class="animated-text">Pourquoi faire <span>confiance</span> à notre cabinet ? </h3>
     </div>
     <div class="confiance-number">
         <div class="number-left">

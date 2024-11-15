@@ -1,6 +1,6 @@
 <section class="home-section-actualites">
     <div class="actualites-titre">
-        <h2>Les dernières actualités du <span>cabinet KLP Partners</span></h2>
+        <h2 class="animated-text">Les dernières actualités du <span>cabinet KLP Partners</span></h2>
     </div>
     <div class="actualites-content">
         <?php

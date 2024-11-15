@@ -1,7 +1,7 @@
 <!-- sections klp accompagne  -->
 <section class="home-about-accompagnement">
     <div class="accompagnement-title">
-        <h2>KLP Partners vous accompagne<br>
+        <h2 class="animated-text">KLP Partners vous accompagne<br>
             <span>partout en France<span>
         </h2>
     </div>

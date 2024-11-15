@@ -1,6 +1,6 @@
 <section class="home-notre-equipe">
     <div class="notre-equipe-title">
-        <h3>Une équipe d’avocats<br>
+        <h3 class="animated-text">Une équipe d’avocats<br>
             spécialisée en <span>droit social</span> </h3>
     </div>
     <div class="notre-equipe-card">
