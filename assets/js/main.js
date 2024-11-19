@@ -148,4 +148,104 @@ jQuery(document).ready(function ($) {
     currentSlide = (currentSlide + 1) % slides.length;
     showSlide(currentSlide);
   }, 5000);
+
+
+
+
+
+  /* //slider
+    const $cardsContainer = $('.notre-equipe-card');
+    const $cards = $cardsContainer.find('.card');
+    let currentCardIndex = 0;
+    const totalCards = $cards.length;
+
+    // Cacher toutes les cartes sauf la première
+    $cards.hide().first().show();
+
+    $('.slider-next').on('click', function() {
+        // Carte courante
+        const $currentCard = $cards.eq(currentCardIndex);
+        
+        // Prochaine carte
+        currentCardIndex = (currentCardIndex + 1) % totalCards;
+        const $nextCard = $cards.eq(currentCardIndex);
+
+        // Vider le conteneur
+        $cardsContainer.empty();
+
+        // Ajouter les cartes dans le nouvel ordre
+        $cardsContainer.append($nextCard);
+        $nextCard.show();
+    });
+
+    $('.slider-prev').on('click', function() {
+        // Carte courante
+        const $currentCard = $cards.eq(currentCardIndex);
+        
+        // Carte précédente
+        currentCardIndex = (currentCardIndex - 1 + totalCards) % totalCards;
+        const $prevCard = $cards.eq(currentCardIndex);
+
+        // Vider le conteneur
+        $cardsContainer.empty();
+
+        // Ajouter les cartes dans le nouvel ordre
+        $cardsContainer.append($prevCard);
+        $prevCard.show();
+    }); */
+
+    const $cardsContainer = $('.notre-equipe-card');
+const $cards = $cardsContainer.find('.card');
+let currentCardIndex = 0;
+const totalCards = $cards.length;
+
+// Fonction pour gérer l'affichage des cartes en fonction de la taille de l'écran
+function handleCardsDisplay() {
+    if ($(window).width() < 992) {
+        // Sous 992px : cacher toutes les cartes sauf la première
+        $cards.hide().first().show();
+    } else {
+        // Au-delà de 992px : afficher toutes les cartes
+        $cards.show();
+    }
+}
+
+// Appeler la fonction au chargement de la page
+handleCardsDisplay();
+
+// Réagir au redimensionnement de la fenêtre
+$(window).on('resize', handleCardsDisplay);
+
+$('.slider-next').on('click', function () {
+    // Sous 992px, permettre le slider
+    if ($(window).width() < 992) {
+        const $currentCard = $cards.eq(currentCardIndex);
+        currentCardIndex = (currentCardIndex + 1) % totalCards;
+        const $nextCard = $cards.eq(currentCardIndex);
+        $cardsContainer.empty();
+        $cardsContainer.append($nextCard);
+        $nextCard.show();
+    }
+});
+
+$('.slider-prev').on('click', function () {
+    // Sous 992px, permettre le slider
+    if ($(window).width() < 992) {
+        const $currentCard = $cards.eq(currentCardIndex);
+        currentCardIndex = (currentCardIndex - 1 + totalCards) % totalCards;
+        const $prevCard = $cards.eq(currentCardIndex);
+        $cardsContainer.empty();
+        $cardsContainer.append($prevCard);
+        $prevCard.show();
+    }
+});
+
+   
+
+
+    
+
+
+
+
 });

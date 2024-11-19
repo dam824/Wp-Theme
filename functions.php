@@ -64,4 +64,7 @@ add_action('wp_default_scripts', 'redcat_remove_jquery_migrate'); // Supprime jq
 add_action('after_setup_theme', 'redcat_register_menus');
 add_action('after_setup_theme', 'redcat_custom_logo_setup');
 
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('wp_print_styles', 'print_emoji_styles');
+
 ?>

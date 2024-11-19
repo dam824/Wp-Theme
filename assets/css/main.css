@@ -792,6 +792,8 @@ align-items: center;
     
     padding: 102px 57px 82px 57px;
    position: relative;
+   display: flex;
+   justify-content: space-around;
 }
 
  
@@ -847,6 +849,7 @@ align-items: center;
     display: flex;
     align-items: flex-end;
     cursor: pointer;
+    
 }
 
 .card-overlay {
@@ -906,6 +909,14 @@ align-items: center;
     height: 1px;
     background-color: #000;
 }
+
+.slider-prev, .slider-next{
+    display: none;
+}
+
+ 
+
+
 
 /***********ATUALITES *********/
 
