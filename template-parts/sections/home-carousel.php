@@ -5,7 +5,6 @@
         <span class="indicator" data-slide="1"></span>
         <span class="indicator" data-slide="2"></span>
     </div>
-
     <div class="caroussel-container">
         <div class="carousel-slides-title">
             <div class="caroussel-slide" data-slide="0">
@@ -18,7 +17,6 @@
                 <h3>Formation</h3>
             </div>
         </div>
-
         <div class="caroussel-slide-content">
             <div class="about-red-text active" data-slide="0">
                 <p>Nos avocats vous conseillent sur l’application de la réglementation du travail et veillent à la mise en place des solutions adaptées à l’entreprise et conformes aux meilleures pratiques.</p>

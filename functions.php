@@ -67,4 +67,38 @@ add_action('after_setup_theme', 'redcat_custom_logo_setup');
 remove_action('wp_head', 'print_emoji_detection_script', 7);
 remove_action('wp_print_styles', 'print_emoji_styles');
 
+
+//inclure les requetes personnalisées 
+
+require_once get_template_directory().'/inc/queries.php';
+
+// Activer les images mises en avant pour les articles
+add_theme_support('post-thumbnails');
+
+
+
+
+/* add_filter('single_template', function($single_template){
+    global $post;
+
+    if (has_category('collaborateurs', $post)){
+        $new_template = locate_template('single-collaborateurs.php');
+        if(!empty($new_template)){
+            return $new_template;
+        }
+    }
+
+    if(has_category('cabinet', $post)){
+        $new_template = locate_template('single-cabinet.php');
+        if(!empty($new_template)){
+            return($new_template);
+        }
+    }
+
+    return $single_template;
+}) */
+
+
+
 ?>
+
