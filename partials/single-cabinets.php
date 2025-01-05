@@ -46,7 +46,5 @@
             <p><?php echo esc_html($horaires)?></p>
             <?php endif; ?>
         </div>
-       
     </div>
-    
 </div>
