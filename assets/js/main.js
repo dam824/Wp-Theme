@@ -240,12 +240,5 @@ $('.slider-prev').on('click', function () {
     }
 });
 
-   
-
-
-    
-
-
-
 
 });

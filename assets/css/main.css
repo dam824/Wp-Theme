@@ -1185,3 +1185,119 @@ align-items: center;
     font-size: 12px;
     margin-top: 30px;
 }
+
+.cabinet{
+    border:solid 1px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    padding-bottom: 123px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+
+
+
+.cabinet__header{
+    border: solid 1px red;
+}
+
+.cabinet__intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    max-width: 1200px; 
+    margin: auto; 
+    gap: 66px; 
+}
+
+.cabinet__title {
+    flex: 1;  
+    max-width: 40%;  
+}
+
+.cabinet__subtitle {
+    flex: 1;
+    max-width: 50%;  
+    text-align: left;  
+}
+
+.cabinet__subtitle p{
+    font-family: "TTHoves";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;  
+    line-height: 40px;
+    width: 100%;
+    color: #333;  
+    margin: 0;  
+    padding: 0 20px; 
+}
+
+.cabinet__title h1 {
+    font-family: "ivypresto-display", serif;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.cabinet__title span{
+    font-style: italic;
+}
+
+.cabinet__founders{
+    display: flex;
+    justify-content: center;   
+    gap: 40px;  
+    max-width: 1200px;  
+    margin: 50px auto 0;
+}
+
+.cabinet__founder{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;  
+    width: 568px;
+    height: 597px;
+    text-align: center;
+}
+
+.cabinet__founder-img{
+    width: 100%;
+    height: 483px; 
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.cabinet__founder-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
+}
+
+.cabinet__founder-name{
+    font-family: "TTHoves";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    margin: 0;
+    color: black;
+}
+
+.cabinet__founder-info {
+    width: 100%;
+    padding: 10px 0;  
+    text-align: left;
+}
+
+.cabinet__founder-description{
+    font-family: "TTHoves";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0;
+    color: black;
+}
