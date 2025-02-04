@@ -53,47 +53,107 @@ $collaborateur_query = get_collaborateurs(); // Appel des requêtes définies da
         <?php endif; ?>
     </div>
 
-
-
-<!-- Section Locations -->
-<div class="cabinet__locations">
-    <div class="cabinet__locations-header">
-        <div class="cabinet__location-title">
-            <h2 class="animated-text">KLP vous accompagne partout en France</h2>
+    <!-- Section Title -->
+    <div class="cabinet__text-slide">
+        <div class="cabinet__text-wrapper" data-text="KLP vous accompagne partout en France ">
+            <h2>KLP vous accompagne partout en France</h2>
         </div>
     </div>
 
-    <?php if (!empty($cabinet_query)) : ?>
-        <?php foreach ($cabinet_query as $cabinet) : ?>
-            <div class="cabinet__location-content">
-                <div class="cabinet__location-title">
-                    <h3 class="animated-text"><?php echo esc_html($cabinet['title']); ?></h3>
-                </div>
+
+
+    <!-- Section Locations -->
+    <div class="cabinet__locations">
+        <?php if (!empty($cabinet_query)) : ?>
+            <?php foreach ($cabinet_query as $cabinet) : ?>
                 <div class="cabinet__location-content">
-                    <p><?php echo wp_kses_post($cabinet['content']); ?></p>
+                    <div class="cabinet__location-header">
+                        <div class="cabinet__location-title">
+                            <h3 class="animated-text"><?php echo esc_html($cabinet['title']); ?></h3>
+                        </div>
+                        <div class="cabinet__location-description">
+                            <p><?php echo wp_kses_post($cabinet['content']); ?></p>
+                        </div>
+                    </div>
+                    <div class="cabinet__location-img">
+                        <?php if (!empty($cabinet['featured_image'])) : ?>
+                            <img src="<?php echo esc_url($cabinet['featured_image']); ?>" alt="<?php echo esc_attr($cabinet['title']); ?>">
+                        <?php else : ?>
+                            <p>Aucune image trouvée</p>
+                        <?php endif; ?>
+                    </div>
+
+                    <!-- AJOUT ICI : Section cabinet__location-details -->
+                    <div class="cabinet__location-details">
+                        <p><span>Adresse :</span> <?php echo esc_html($cabinet['adresse']); ?></p>
+                        <p><span>Horaires :</span> <?php echo esc_html($cabinet['horaires']); ?></p>
+                        <p><span>Email :</span> <a href="mailto:<?php echo esc_html($cabinet['mail']); ?>"><?php echo esc_html($cabinet['mail']); ?></a></p>
+                        <p><span>Téléphone :</span> <a href="tel:<?php echo esc_html($cabinet['telephone']); ?>"><?php echo esc_html($cabinet['telephone']); ?></a></p>
+                    </div>
                 </div>
-                <div class="cabinet__location-img">
-                    <?php if (!empty($cabinet['featured_image'])) : ?>
-                        <img src="<?php echo esc_url($cabinet['featured_image']); ?>" alt="<?php echo esc_attr($cabinet['title']); ?>">
-                    <?php else : ?>
-                        <p>Aucune image trouvée</p>
-                    <?php endif; ?>
+            <?php endforeach; ?>
+        <?php else : ?>
+            <p>Aucun cabinet trouvé.</p>
+        <?php endif; ?>
+
+    </div>
+
+
+    <!-- Section les plus du cabinets -->
+    <div class="cabinet__lesplus">
+        <div class="cabinet__lesplus-intro">
+            <h2>Les plus du <br><em>cabinet KLP Partners</em></h2>
+            <p>Rorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+
+        <div class="cabinet__lesplus-grid">
+            <div class="parent">
+                <div class="div-g">
+                    <div class="div1">
+                        <h3 class="cabinet__lesplus-title">Expertise</h3>
+                        <p>Rorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Nunc vulputate libero et velit interdum, ac aliquet odio mattis.
+                            Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
+                    </div>
+                    <div class="div2">
+                        <h3 class="cabinet__lesplus-title">Adaptabilité</h3>
+                        <p>Rorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Nunc vulputate libero et velit interdum, ac aliquet odio mattis.
+                            Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
+                    </div>
+                </div>
+                <div class="div-d">
+                    <div class="div3">
+                        <h3 class="cabinet__lesplus-title">Proximité</h3>
+                        <p>Rorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Nunc vulputate libero et velit interdum, ac aliquet odio mattis.
+                            Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
+                    </div>
+                    <div class="div4">
+                        <h3 class="cabinet__lesplus-title">Accompagnement</h3>
+                        <p>Rorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Nunc vulputate libero et velit interdum, ac aliquet odio mattis.
+                            Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
+                    </div>
                 </div>
 
-                <!-- AJOUT ICI : Section cabinet__location-details -->
-                <div class="cabinet__location-details">
-                    <p><strong>Adresse :</strong> <?php echo esc_html($cabinet['adresse']); ?></p>
-                    <p><strong>Horaires :</strong> <?php echo esc_html($cabinet['horaires']); ?></p>
-                    <p><strong>Email :</strong> <a href="mailto:<?php echo esc_html($cabinet['mail']); ?>"><?php echo esc_html($cabinet['mail']); ?></a></p>
-                    <p><strong>Téléphone :</strong> <a href="tel:<?php echo esc_html($cabinet['telephone']); ?>"><?php echo esc_html($cabinet['telephone']); ?></a></p>
-                </div>
+
             </div>
-        <?php endforeach; ?>
-    <?php else : ?>
-        <p>Aucun cabinet trouvé.</p>
-    <?php endif; ?>
+        </div>
+    </div>
+       <!-- Section citation -->
+       <div class="cabinet__citation">
+        <div class="cabinet__citation-svg">"</div>
+        <div class="cabinet__citation-text">
+            <p>KLP Partners, c’est bien plus qu’un simple <br /> cabinet d’avocat. C’est ...lorem ipsum dolor <br /> sit amet, consectetur adipiscing elit. </p>
+        </div>
+        <div class="cabinet__citation-signature">
+            <p> --- Les fondatrices</p>
+        </div>
+    </div>
 
-</div>
+ 
+
 
 </div>
 
