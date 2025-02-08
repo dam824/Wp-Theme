@@ -11,25 +11,21 @@ $articles= get_articles_by_categories();
 $categories = get_categories_data();
 
 ?>
-<?php 
-echo '<h2>Articles Récupérés :</h2>';
-var_dump(count($articles));
-echo '<h2>Catégories Récupérées :</h2>';
-var_dump(count($categories));
-
-?>
-<div class="cabinet">
-    <h1>Hello Actualités</h1>
+ 
+<div class="actualites__page">
+   
     <div class="actualites__header">
-        <div class="actualites__header-title">Toutes les actualités du
-            cabinet KLP Partners</div>
-        <div class="actualites__header-subtitle">Explorez nos actualités juridiques et plongez dans l’univers de notre cabinet. Analyses, conseils pratiques et décryptages des enjeux actuels pour vous informer, vous guider et enrichir votre compréhension du droit."</div>
+       <h1>Toutes les actualités du<br>
+       cabinet KLP Partners</h1>
+         
+        <p>Explorez nos actualités juridiques et plongez dans l’univers de notre cabinet. Analyses, conseils pratiques et décryptages des enjeux actuels pour vous informer, vous guider et enrichir votre compréhension du droit."</p>
     </div>
     <div class="actualites__banner">
-        <!-- image -->
+    <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/actualite-banner.jpg'); ?>" alt="Bannière Actualités" class="actualites__banner-img">
+
     </div>
     <!-- Menu blog -->
-        <div class="blog">
+        <div class="actualites__blog">
             <div class="actualites__blog-menu">
                 <!-- Tout voir / Contentieux / Conseil / Formation -->
                 <ul>
@@ -52,7 +48,9 @@ var_dump(count($categories));
                     </div> -->
                 <?php //endforeach   ?>
             </div>
+            <button id="loadMoreArticles" class="btn-load-more">Voir plus d'actualités +</button>
         </div>
+       
 </div>
 
 

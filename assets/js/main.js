@@ -241,4 +241,19 @@ $('.slider-prev').on('click', function () {
 });
 
 
+
+$(".actualites__blog-menu li").on("click", function(){
+  $(".actualites__blog-menu li").removeClass("filter__active"); // Correction ici
+  $(this).addClass("filter__active");
 });
+
+// Déclenchement du clic sur "Tout voir" au chargement de la page
+setTimeout(function() {
+  $(".actualites__blog-menu li[data-category='all']").trigger("click");
+}, 500); // Petit délai pour s'assurer que tout est chargé avant le trigger
+
+});
+
+
+
+

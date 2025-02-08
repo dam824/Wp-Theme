@@ -4,9 +4,12 @@
 function redcat_filter_articles() {
     error_log('AJAX action appelée');
     $category = sanitize_text_field($_POST['category']); // Catégorie sélectionnée
+    $page = isset($_POST['page']) ? intval($_POST['page']) : 1;
+    $posts_per_page = 6; // Nombre d'articles affichés par page
 
     $args = [
-        'posts_per_page' => -1,
+        'posts_per_page' => $posts_per_page,
+        'paged' => $page,
         'orderby' => 'date',
         'order' => 'DESC',
     ];
